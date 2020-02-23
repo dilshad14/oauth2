@@ -16,7 +16,7 @@ spring:
         registration:
           uaa:
             client-id: 0oa2bqdaipisQbjdD4x6
-            client-secret: Aqn5KFPIQG_vD2RuBy3p_faUeNnlQztMj85ftyl4
+            client-secret: ************************************
             authorizationGrantType: authorization_code
             redirect-uri: "{baseUrl}/api/home/"
             scope: openid
