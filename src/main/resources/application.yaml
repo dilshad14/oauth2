@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  
+
+baseUrl: http://localhost:8080
+uaa-base-url: https://dev-587447.okta.com
+ 
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${uaa-base-url}/oauth2
+          jwk-set-uri: ${uaa-base-url}/oauth2/default/v1/keys

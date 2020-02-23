@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  
+
+baseUrl: http://localhost:8080
+uaa-base-url: https://dev-587447.okta.com
+ 
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://idp.example.com/issuer 
+          jwk-set-uri: ${uaa-base-url}/oauth2/default/v1/keys
+      client:
+        registration:
+          uaa:
+            client-id: 0oa2bqdaipisQbjdD4x6
+            client-secret: Aqn5KFPIQG_vD2RuBy3p_faUeNnlQztMj85ftyl4
+            authorizationGrantType: authorization_code
+            redirect-uri: "{baseUrl}/api/home/"
+            scope: openid
+            clientName: oauth2
+        provider:
+          uaa:
+            token-uri: ${uaa-base-url}/oauth2/default/v1/token
+            authorization-uri: ${uaa-base-url}/oauth2/default/v1/authorize
+            user-info-uri: ${uaa-base-url}/oauth2/default/v1/userinfo
